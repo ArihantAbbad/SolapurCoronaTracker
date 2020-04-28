@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <title>Solapur Corona Tracker</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="images/logo.jpg">
+
+  <!-- Font Awesome -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+  <!-- Bootstrap Scripts -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+
+  <script type="text/javascript">
+    window.onload = function() {
+      var chart = new CanvasJS.Chart("chartContainer", {
+        title: {
+          text: "Total cases"
+        },
+        legend: {
+          maxWidth: 350,
+          itemWidth: 120
+        },
+        data: [{
+          type: "pie",
+          showInLegend: true,
+          legendText: "{indexLabel}",
+          dataPoints: [{
+              y: 65,
+              indexLabel: "Total confirmed"
+            },
+            {
+              y: 10,
+              indexLabel: "New cases"
+            },
+            {
+              y: 5,
+              indexLabel: "Total death occured"
+            },
+            {
+              y: 60,
+              indexLabel: "Total active"
+            },
+            {
+              y: 1,
+              indexLabel: "Total Recovered"
+            },
+            {
+              y: 20,
+              indexLabel: "Critical cases"
+            }
+
+          ]
+        }]
+      });
+
+
+
+
+
+
+
+
+      var chart1 = new CanvasJS.Chart("chartContainer1", {
+        title: {
+          text: "Total cases"
+        },
+        data: [
+
+          {
+            dataPoints: [{
+                x: 1,
+                y: 65,
+                label: "Total confirmed"
+              },
+              {
+                x: 2,
+                y: 10,
+                label: "New cases"
+              },
+              {
+                x: 3,
+                y: 5,
+                label: "Total death occured"
+              },
+              {
+                x: 4,
+                y: 60,
+                label: "Total active"
+              },
+              {
+                x: 5,
+                y: 1,
+                label: "Total Recovered"
+              },
+              {
+                x: 6,
+                y: 20,
+                label: "Critical cases"
+              }
+
+            ]
+          }
+        ]
+      });
+
+      chart.render();
+      chart1.render();
+
+    }
+  </script>
+  <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+
+</head>
+
+<body>
+
+  <section class="colored-section" id="title">
+
+    <div class="container-fluid">
+
+      <!-- Nav Bar -->
+
+      <nav class="navbar navbar-expand-lg navbar-dark">
+
+        <a class="navbar-brand" href="#"><img src="images/logo.jpg" alt="Logo" style="width:80px; height:80px;"></a>
+
+        <a class="navbar-brand" href="">Solapur Corona Tracker</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link navbut" href="#index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="connect.html">Connect</a>
+            </li>
+          </ul>
+
+        </div>
+      </nav>
+
+    </div>
+  </section>
+
+  <!-- Pricing -->
+
+  <section class="info" id="pricing">
+    <h4><b>Last updated :</b> April 28, 2020.</h4>
+
+    <div class="row">
+
+      <div class="pricing-column col-lg-4 col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h5><b>Total Confirmed</b></h5>
+          </div>
+          <div class="card-body">
+            <h2 class="price-text">65</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="pricing-column col-lg-4 col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h5><b>New Cases</b></h5>
+          </div>
+          <div class="card-body">
+            <h2 class="price-text">10</h2>
+          </div>
+        </div>
+      </div>
+      <div class="pricing-column col-lg-4 col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h5><b>Total Recovered</b></h5>
+          </div>
+          <div class="card-body">
+            <h2 class="price-text">1</h2>
+          </div>
+        </div>
+      </div>
+      <div class="pricing-column col-lg-4 col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h5><b>Total Deaths</b></h5>
+          </div>
+          <div class="card-body">
+            <h2 class="price-text">5</h2>
+          </div>
+        </div>
+      </div>
+      <div class="pricing-column col-lg-4 col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h5><b>Total Active</b></h5>
+          </div>
+          <div class="card-body">
+            <h2 class="price-text">60</h2>
+          </div>
+        </div>
+      </div>
+      <div class="pricing-column col-lg-4 col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h5><b>Total Critical</b></h5>
+          </div>
+          <div class="card-body">
+            <h2 class="price-text">20</h2>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+
+  </section>
+
+  <section id="charts">
+    <div id="chartContainer" style="height: 400px; width: 50%; display:inline-block; position:relative ">
+    </div>
+
+    <div id="chartContainer1" style="height: 400px; width: 50%; float : left ; display: inline-block;position:relative "></div>
+  </section>
+
+
+  <section>
+
+    <div class="container white-section">
+      <h2>Area-Wise Stats</h2>
+      <table class="table table-bordered table-striped tabc">
+        <thead>
+          <tr>
+            <th>No.</th>
+            <th>Area</th>
+            <th>Confirmed Cases</th>
+            <th>Deaths</th>
+            <th>New Cases</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Paccha Peth</td>
+            <td>20</td>
+            <td>1</td>
+            <td>+0</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Indira Nagar</td>
+            <td>04</td>
+            <td>1</td>
+            <td>+0</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Joshi Galli</td>
+            <td>02</td>
+            <td>0</td>
+            <td>+0</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Mahsiha Chowk</td>
+            <td>01</td>
+            <td>0</td>
+            <td>+0</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Bapuji Nagar</td>
+            <td>05</td>
+            <td>0</td>
+            <td>+0</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Shastri Nagar</td>
+            <td>10</td>
+            <td>1</td>
+            <td>+0</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>Qurban Hussain Nagar</td>
+            <td>03</td>
+            <td>0</td>
+            <td>+0</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>Gajanath Nagar</td>
+            <td>01</td>
+            <td>0</td>
+            <td>+0</td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>ShivGanga Nagar</td>
+            <td>01</td>
+            <td>0</td>
+            <td>+0</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>Mother India Zhopad-Patti</td>
+            <td>01</td>
+            <td>0</td>
+            <td>+0</td>
+          </tr>
+          <tr>
+            <td>11</td>
+            <td>Bhadravati Peth</td>
+            <td>01</td>
+            <td>0</td>
+            <td>+0</td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td>Shanivar Peth</td>
+            <td>01</td>
+            <td>1</td>
+            <td>+0</td>
+          </tr>
+          <tr>
+            <td>13</td>
+            <td>Lodhi Galli</td>
+            <td>01</td>
+            <td>0</td>
+            <td>+0</td>
+          </tr>
+          <tr>
+            <td>14</td>
+            <td>Modi-Khana</td>
+            <td>02</td>
+            <td>0</td>
+            <td>+0</td>
+          </tr>
+          <tr>
+            <td>15</td>
+            <td>Kumtha Naka</td>
+            <td>01</td>
+            <td>0</td>
+            <td>+0</td>
+          </tr>
+          <tr>
+            <td>16</td>
+            <td>Nayi Zindagi</td>
+            <td>01</td>
+            <td>1</td>
+            <td>+0</td>
+          </tr>
+          <tr>
+            <td>17</td>
+            <td>Karnik Nagar</td>
+            <td>01</td>
+            <td>0</td>
+            <td>+0</td>
+          </tr>
+          <tr>
+            <td>18</td>
+            <td>Yashwant Society</td>
+            <td>01</td>
+            <td>0</td>
+            <td>+0</td>
+          </tr>
+          <tr>
+            <td>19</td>
+            <td>Rang-Bhavan</td>
+            <td>01</td>
+            <td>0</td>
+            <td>+0</td>
+          </tr>
+          <tr>
+            <td>20</td>
+            <td>SRP Camp</td>
+            <td>01</td>
+            <td>0</td>
+            <td>+0</td>
+          </tr>
+          <tr>
+            <td>21</td>
+            <td>Taluka Thanya Javal</td>
+            <td>01</td>
+            <td>0</td>
+            <td>+0</td>
+          </tr>
+          <tr>
+            <td>22</td>
+            <td>Chandni Chowk</td>
+            <td>01</td>
+            <td>0</td>
+            <td>+0</td>
+          </tr>
+          <tr>
+            <td>23</td>
+            <td>Near Civil</td>
+            <td>01</td>
+            <td>0</td>
+            <td>+0</td>
+          </tr>
+          <tr>
+            <td>24</td>
+            <td>Gherdi</td>
+            <td>01</td>
+            <td>0</td>
+            <td>+0</td>
+          </tr>
+          <tr>
+            <td>25</td>
+            <td>Mohal</td>
+            <td>01</td>
+            <td>0</td>
+            <td>+0</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><b>Total</b></td>
+            <td><b>65</b></td>
+            <td><b>5</b></td>
+            <td><b>+0</b></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </section>
+
+
+
+
+  <!-- Footer -->
+
+  <footer class="white-section1" id="footer">
+    <div class="container-fluid foct">
+      <h3 class="fooh">Designed and Developed by :<a href="connect.html"> Onkar & Arihant</a></h3>
+      <button type="button" class="btn btn-lg btn-outline-dark cusb" name="button"><a href="mailto:solapurcoronatracker@mail.com">Contact Us</a></button>
+      <button type="button" class="btn btn-lg btn-outline-dark cusb" name="button"><a href="https://docs.google.com/forms/d/e/1FAIpQLSf_8MBuqFHB0Pg7PSyxQ7z72FzNgZ_Cfl9rIAlJ3EYcIKvAFg/viewform?usp=sf_link">FeedBack</a></button>
+      <p><b>Disclaimer: </b> Data Sources are based on Various Websites, data accuracy may be affected. We are continuously monitoring related Websites, <br> for regular updates on cases counts.</p>
+      <p><b>Note : </b>We will update this Data everyday by 18:00</p>
+      <p class="copy">© Copyright 2020 Solapur Corona Tracker</p>
+    </div>
+  </footer>
+
+
+</body>
+
+</html>
